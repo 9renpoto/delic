@@ -1,0 +1,19 @@
+{
+  "name": "delic",
+  "version": "0.0.0",
+  "homepage": "https://github.com/9renpoto/delic",
+  "authors": [
+    "Keisuke Kan <9renpoto@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton-css": "~2.0.4"
+  }
+}
