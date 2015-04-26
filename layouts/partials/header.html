@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{ .Site.BaseUrl }}/ico/favicon.ico" >
-    <link rel="stylesheet" href="{{ .Site.BaseUrl }}css/custom.css" >
-    <link rel="stylesheet" href="{{ .Site.BaseUrl }}bower_components/skeleton-css/css/skeleton.css" >
-    <link rel="stylesheet" href="{{ .Site.BaseUrl }}bower_components/highlightjs/styles/default.css">
+    <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/custom.css" >
+    <link rel="stylesheet" href="{{ .Site.BaseUrl }}/bower_components/skeleton-css/css/skeleton.css" >
+    <link rel="stylesheet" href="{{ .Site.BaseUrl }}/bower_components/highlightjs/styles/default.css">
     <script src="{{ .Site.BaseUrl }}bower_components/highlightjs/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
@@ -24,7 +24,10 @@
   </head>
   <body role="document" data-twttr-rendered="true">
     <div class="u-max-full-width" style="text-align:right">
-      <a href={{ .Site.BaseUrl }}blog>blog</a>
-      <a href={{ .Site.BaseUrl }}categories>categories</a>
+      {{ if isset .Site.Params "Links" }}
+        {{ range .Site.Params.Links }}
+          <a href=/{{.}}/>{{.}}</a>
+        {{ end }}
+      {{ end }}
     </div>
     <div class="u-max-full-width container">
