@@ -6,6 +6,13 @@
     <h1 class="post-h1">{{ .Title }}</h1>
     {{ with .Params.subtitle }} <h3 class="u-mute u-mtn">{{ . }}</h3>{{ end }}
   </header>
+
+  <section>
+    {{ range .Params.categories }}
+    <a class="button button-primary" href="/categories/{{.}}">{{.}}</a>
+    {{ end  }}
+  </section>
+
   <section>
     {{ .Content }}
   </section>
