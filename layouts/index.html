@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <section role="main">
-  <h3>{{.Title}}</h3>
+  <h1>{{.Title}}</h1>
   {{ range first 2 .Data.Pages }}
   <article>
     {{ partial "content.html" . }}
