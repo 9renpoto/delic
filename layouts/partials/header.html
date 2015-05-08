@@ -26,7 +26,7 @@
     <div class="u-max-full-width" style="text-align:right">
       {{ if isset .Site.Params "Links" }}
         {{ range .Site.Params.Links }}
-          <a href=/{{.}}/>{{.}}</a>
+          <a href={{ $.Site.BaseUrl }}/{{.}}/>{{.}}</a>
         {{ end }}
       {{ end }}
     </div>
