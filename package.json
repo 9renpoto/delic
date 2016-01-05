@@ -14,5 +14,8 @@
   "homepage": "https://github.com/9renpoto/delic#readme",
   "dependencies": {
     "bower": "^1.7.2"
+  },
+  "devDependencies": {
+    "webpack": "^1.12.9"
   }
 }
