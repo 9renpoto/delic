@@ -1,0 +1,10 @@
+box: wercker/default
+build:
+  steps:
+    - npm-install
+    - script:
+      name: lint
+      code: $(npm bin)/eslint src
+  after-steps:
+    - wantedly/pretty-slack-notify:
+        webhook_url: $SLACK_WEBHOOK_URL
