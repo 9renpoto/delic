@@ -1,10 +1,9 @@
 box: nodesource/trusty
 build:
   steps:
-    - npm-install
     - script:
-        name: lint
-        code: $(npm bin)/eslint src
+        code: export NODE_ENV='testing'
+    - npm-install
   after-steps:
     - slack-notifier:
       url: $SLACK_URL
