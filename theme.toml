@@ -1,7 +1,7 @@
 name = "Delic"
 license = "MIT"
-licenselink = "https://github.com/.../.../LICENSE.md"
-description = ""
+licenselink = "https://github.com/9renpoto/delic/LICENSE.md"
+description = "simple hugo theme"
 homepage = "http://siteforthistheme.com/"
 tags = ["", ""]
 features = ["", ""]
