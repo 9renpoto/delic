@@ -4,6 +4,9 @@ build:
     - script:
         code: export NODE_ENV='testing'
     - npm-install
+    - script:
+        name: lint
+        code: $(npm bin)/eslint src
   after-steps:
     - slack-notifier:
       url: $SLACK_URL
