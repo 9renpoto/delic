@@ -4,11 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{ .Site.BaseUrl }}/ico/favicon.ico" >
-    <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/custom.css" >
-    <link rel="stylesheet" href="{{ .Site.BaseUrl }}/bower_components/skeleton-css/css/skeleton.css" >
-    <link rel="stylesheet" href="{{ .Site.BaseUrl }}/bower_components/highlightjs/styles/default.css">
-    <script src="{{ .Site.BaseUrl }}/bower_components/highlightjs/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="{{ .Site.BaseUrl }}/assets/delic.bundle.css" >
+    <script async src="{{ .Site.BaseUrl }}/assets/delic.bundle.js"></script>
 
     <title>{{ .Title }}</title>
     {{ if isset .Site.Params "GoogleAnalyticsUserID" }}

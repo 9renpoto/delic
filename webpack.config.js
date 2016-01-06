@@ -33,6 +33,7 @@ module.exports = {
     ],
     alias: {
       'highlight.css': path.join(__dirname, 'bower_components', 'highlightjs', 'styles', 'monokai.css'),
+      'highlight.js': path.join(__dirname, 'bower_components', 'highlightjs', 'highlight.pack.js'),
       'skeleton.css': path.join(__dirname, 'bower_components', 'skeleton-css', 'css', 'skeleton.css')
     }
   },
