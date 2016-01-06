@@ -1,4 +1,4 @@
-box: wercker/default
+box: wercker/nodejs
 build:
   steps:
     - npm-install
@@ -6,5 +6,8 @@ build:
       name: lint
       code: $(npm bin)/eslint src
   after-steps:
-    - wantedly/pretty-slack-notify:
-        webhook_url: $SLACK_WEBHOOK_URL
+    - slack-notifier:
+      url: $SLACK_URL
+      channel: $SLACK_CHANNEL
+      username: $SLACK_WERCKER_BOT_NAME
+      branch: master
