@@ -12,6 +12,7 @@
     "url": "https://github.com/9renpoto/delic/issues"
   },
   "homepage": "https://github.com/9renpoto/delic#readme",
+  "private": true,
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.3.26",
