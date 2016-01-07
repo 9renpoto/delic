@@ -8,7 +8,7 @@
 
 <section>
   {{ range $category := .Params.categories }}
-  <a class="button button-primary" href="{{ $.Site.BaseUrl }}/categories/{{ $category }}">{{ $category }}</a>
+  <a class="button button-primary" href="{{ $.Site.BaseURL }}/categories/{{ $category }}">{{ $category }}</a>
   {{ end  }}
 </section>
 
