@@ -14,7 +14,6 @@
     "tests"
   ],
   "dependencies": {
-    "skeleton-css": "~2.0.4",
-    "highlightjs": "~9.1.0"
+    "skeleton-css": "~2.0.4"
   }
 }

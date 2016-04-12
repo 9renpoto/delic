@@ -1,4 +1,3 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
 const webpack = require('webpack')
 
@@ -15,7 +14,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.png$/, loader: 'url-loader?mimetype=image/png' },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
@@ -32,8 +31,8 @@ module.exports = {
       'node_modules'
     ],
     alias: {
-      'highlight.css': path.join(__dirname, 'bower_components', 'highlightjs', 'styles', 'monokai.css'),
-      'highlight.js': path.join(__dirname, 'bower_components', 'highlightjs', 'highlight.pack.js'),
+      'highlight.css': path.join(__dirname, 'node_modules', 'highlight.js', 'styles', 'monokai.css'),
+      // 'highlight.js': path.join(__dirname, 'bower_components', 'highlightjs', 'highlight.pack.js'),
       'skeleton.css': path.join(__dirname, 'bower_components', 'skeleton-css', 'css', 'skeleton.css')
     }
   },
@@ -43,7 +42,6 @@ module.exports = {
       mangle: true,
       preserveComments: false,
       minimize: false
-    }),
-    new ExtractTextPlugin('[name].bundle.css')
+    })
   ]
 }
