@@ -1,21 +1,9 @@
 {
   "name": "delic",
-  "version": "0.0.1",
-  "description": "hugo templates",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/9renpoto/delic.git"
-  },
   "scripts": {
     "lint": "eslint .",
     "test": "npm run lint"
   },
-  "author": "9renpoto",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/9renpoto/delic/issues"
-  },
-  "homepage": "https://github.com/9renpoto/delic#readme",
   "private": true,
   "dependencies": {
     "highlight.js": "^9.4.0"
