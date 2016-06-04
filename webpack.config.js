@@ -1,3 +1,4 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
 const webpack = require('webpack')
 
@@ -6,15 +7,15 @@ module.exports = {
     delic: path.join(__dirname, 'src/js/index.js')
   },
   output: {
-    // sourceMapFilename: '[name].bundle.map',
+    sourceMapFilename: '[name].bundle.map',
     path: path.join(__dirname, 'static/assets'),
     filename: '[name].bundle.js'
   },
-  // devtool: '#source-map',
+  devtool: '#source-map',
   module: {
     loaders: [
       { test: /\.png$/, loader: 'url-loader?mimetype=image/png' },
-      { test: /\.css$/, loader: 'style-loader!css-loader' },
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
@@ -42,6 +43,7 @@ module.exports = {
       mangle: true,
       preserveComments: false,
       minimize: false
-    })
+    }),
+    new ExtractTextPlugin('[name].bundle.css')
   ]
 }
