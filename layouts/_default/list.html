@@ -1,20 +1,24 @@
 {{ partial "header.html" . }}
 
-<section role="main">
-  <h3>{{.Title}}</h3>
-  {{ range .Data.Pages }}
-  <article>
-    <time class="u-txs u-mute">{{ .Date.Format "Monday, January 2, 2006" }}</time>
-    <p>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-      {{ range .Params.categories }}
-        <span style="padding-left:5px;" >
-          <a href="{{ $.Site.BaseURL }}/categories/{{.}}/">#{{.}}</a>
-        </span>
-      {{ end }}
-    </p>
-  </article>
-  {{ end }}
+<section>
+  <div class="content">
+    <h3>{{.Title}}</h3>
+    {{ range .Data.Pages }}
+    <article>
+      <time class="">{{ .Date.Format "Monday, January 2, 2006" }}</time>
+      <p>
+        <div class="subtitle">
+          <a href="{{ .Permalink }}">
+            {{ .Title }}
+          </a>
+          {{ range .Params.categories }}
+            <a href="{{ $.Site.BaseURL }}/categories/{{.}}/">#{{.}}</a>
+          {{ end }}
+        </div>
+      </p>
+    </article>
+    {{ end }}
+  </div>
 </section>
 
 {{ partial "footer.html" . }}

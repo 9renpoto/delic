@@ -15,10 +15,23 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.png$/, loader: 'url-loader?mimetype=image/png' },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract(
+          'style-loader',
+          'css-loader'
+        )
+      },
+      {
+        test: /\.sass$/,
+        loader: ExtractTextPlugin.extract(
+          'style-loader',
+          'css-loader!sass-loader'
+        )
+      },
       {
         test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules)/,
         loader: 'babel',
         query: {
           presets: ['es2015']
@@ -33,8 +46,8 @@ module.exports = {
     ],
     alias: {
       'highlight.css': path.join(__dirname, 'node_modules', 'highlight.js', 'styles', 'monokai.css'),
-      // 'highlight.js': path.join(__dirname, 'bower_components', 'highlightjs', 'highlight.pack.js'),
-      'skeleton.css': path.join(__dirname, 'bower_components', 'skeleton-css', 'css', 'skeleton.css')
+      'highlight.js': path.join(__dirname, 'node_modules', 'highlight.js', 'lib', 'highlight.js'),
+      'bulma.sass': path.join(__dirname, 'node_modules', 'bulma', 'bulma.sass')
     }
   },
   plugins: [
