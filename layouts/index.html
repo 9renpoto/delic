@@ -1,13 +1,10 @@
 {{ partial "header.html" . }}
 
-<section role="main">
-  <h1>{{.Title}}</h1>
+<section>
   {{ range first 2 .Data.Pages }}
   <article>
     {{ partial "content.html" . }}
   </article>
-
-  <hr/>
   {{ end }}
 </section>
 
