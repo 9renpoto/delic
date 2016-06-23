@@ -1,6 +1,7 @@
 {
   "name": "delic",
   "scripts": {
+    "build": "webpack",
     "lint": "eslint .",
     "test": "npm run lint"
   },
