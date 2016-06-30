@@ -1,7 +1,5 @@
+'use strict'
 module.exports = {
-  'extends': 'standard',
-  'plugins': [
-    'standard'
-  ],
+  'extends': '@9renpoto/eslint-config',
   'parser': 'babel-eslint'
 }
