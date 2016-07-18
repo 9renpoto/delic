@@ -4,7 +4,7 @@ const webpack = require('webpack')
 
 module.exports = {
   entry: {
-    delic: path.join(__dirname, 'src/js/index.js')
+    delic: path.join(__dirname, 'src/index.ts')
   },
   output: {
     sourceMapFilename: '[name].bundle.map',
@@ -30,12 +30,9 @@ module.exports = {
         )
       },
       {
-        test: /\.jsx?$/,
+        test: /\.tsx?$/,
         exclude: /(node_modules)/,
-        loader: 'babel',
-        query: {
-          presets: ['es2015']
-        }
+        loader: 'ts-loader'
       }
     ]
   },
