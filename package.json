@@ -2,8 +2,9 @@
   "name": "delic",
   "scripts": {
     "build": "webpack",
-    "lint": "tslint src/*.ts",
-    "test": "npm run lint"
+    "lint:ts": "tslint \"src/*.ts\"",
+    "lint:js": "eslint .",
+    "test": "npm-run-all -p lint:*"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +20,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "node-sass": "^3.8.0",
+    "npm-run-all": "^3.0.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "ts-loader": "^0.8.2",

@@ -27,4 +27,4 @@ MIT
 [daviddm-image]: https://david-dm.org/9renpoto/delic.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/9renpoto/delic
 [dev-daviddm-image]: https://david-dm.org/9renpoto/delic/dev-status.svg
-[dev-daviddm-url]: https://david-dm.org/9renpoto/delic#info=devDependencies
+[dev-daviddm-url]: https://david-dm.org/9renpoto/delic?type=dev
