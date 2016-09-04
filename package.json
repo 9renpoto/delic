@@ -1,12 +1,7 @@
 {
   "name": "delic",
-  "scripts": {
-    "build": "webpack",
-    "lint:ts": "tslint \"src/*.ts\"",
-    "lint:js": "eslint .",
-    "test": "npm-run-all -p lint:*"
-  },
-  "private": true,
+  "description": "Simple hugo theme",
+  "version": "0.0.0",
   "dependencies": {
     "@types/highlight.js": "^9.1.7",
     "bulma": "0.1.2",
@@ -29,5 +24,14 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
     "webpack-sources": "^0.1.2"
+  },
+  "main": "static/assets/delic.bundle.js",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "lint": "npm-run-all -p lint:*",
+    "lint:js": "eslint .",
+    "lint:ts": "tslint \"src/*.ts\"",
+    "test": "npm run lint"
   }
 }

@@ -12,7 +12,9 @@
             {{ .Title }}
           </a>
           {{ range .Params.categories }}
-            <a href="{{ $.Site.BaseURL }}/categories/{{.}}/">#{{.}}</a>
+            <a class="button is-info is-small" href="{{ $.Site.BaseURL }}/categories/{{.}}/">
+              #{{.}}
+            </a>
           {{ end }}
         </div>
       </p>
