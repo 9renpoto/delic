@@ -43,9 +43,19 @@
       <span class="icon"><i class="fa fa-github"></i></span>
     </a>
     {{ end }}
+    {{ if isset .Site.Params "FacebookID" }}
+    <a class="nav-item" href="https://www.facebook.com/{{.Site.Params.FacebookID}}">
+      <span class="icon"><i class="fa fa-facebook"></i></span>
+    </a>
+    {{ end }}
     {{ if isset .Site.Params "TwitterID" }}
     <a class="nav-item" href="https://twitter.com/{{.Site.Params.TwitterID}}">
       <span class="icon"><i class="fa fa-twitter"></i></span>
+    </a>
+    {{ end }}
+    {{ if isset .Site.Params "YoutubeID" }}
+    <a class="nav-item" href="https://www.youtube.com/channel/{{.Site.Params.YoutubeID}}">
+      <span class="icon"><i class="fa fa-youtube"></i></span>
     </a>
     {{ end }}
     {{ if isset .Site.Params "Links" }}
