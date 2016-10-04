@@ -1,4 +1,6 @@
-### https://raw.github.com/github/gitignore//Node.gitignore
+static/assets/
+
+### https://raw.github.com/github/gitignore/be3333655bffe9507d66cc864aee95ed6052b4ed/Node.gitignore
 
 # Logs
 logs

@@ -3,6 +3,7 @@
   "description": "Simple hugo theme",
   "version": "0.1.0",
   "dependencies": {
+    "@9renpoto/sentry-setting": "bitbucket:9renpoto/sentry-setting",
     "@types/highlight.js": "^9.1.7",
     "bulma": "0.2.1",
     "highlight.js": "^9.5.0"
