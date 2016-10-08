@@ -2,24 +2,34 @@
 
 <section>
   <div class="content">
-    <h3>{{.Title}}</h3>
-    {{ range .Data.Pages }}
-    <article>
-      <time class="">{{ .Date.Format "Monday, January 2, 2006" }}</time>
-      <p>
-        <div class="subtitle">
-          <a href="{{ .Permalink }}">
-            {{ .Title }}
-          </a>
-          {{ range .Params.categories }}
-            <a class="button is-info is-small" href="{{ $.Site.BaseURL }}/categories/{{.}}/">
-              #{{.}}
-            </a>
-          {{ end }}
+    <div class="hero is-info">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title">
+            {{.Title}}
+          </h2>
         </div>
-      </p>
-    </article>
-    {{ end }}
+      </div>
+    </div>
+    <div class="container is-fluid">
+      {{ range .Data.Pages }}
+      <article>
+        <time class="">{{ .Date.Format "Monday, January 2, 2006" }}</time>
+        <p>
+          <div class="subtitle">
+            <a href="{{ .Permalink }}">
+              {{ .Title }}
+            </a>
+            {{ range .Params.categories }}
+              <a class="button is-info is-small" href="{{ $.Site.BaseURL }}/categories/{{.}}/">
+                #{{.}}
+              </a>
+            {{ end }}
+          </div>
+        </p>
+      </article>
+      {{ end }}
+    </div>
   </div>
 </section>
 
