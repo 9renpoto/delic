@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
-    "noImplicitAny": false,
-    "sourceMap": false
+    "target": "es6",
+    "outDir": "dist"
   },
   "compileOnSave": false,
   "buildOnSave": false,

@@ -4,7 +4,7 @@ const webpack = require('webpack')
 
 module.exports = {
   entry: {
-    delic: path.join(__dirname, 'src/index.ts')
+    delic: path.join(__dirname, 'dist/index.js')
   },
   output: {
     sourceMapFilename: '[name].bundle.map',
@@ -15,25 +15,8 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.png$/, loader: 'url-loader?mimetype=image/png' },
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract(
-          'style-loader',
-          'css-loader'
-        )
-      },
-      {
-        test: /\.sass$/,
-        loader: ExtractTextPlugin.extract(
-          'style-loader',
-          'css-loader!sass-loader'
-        )
-      },
-      {
-        test: /\.tsx?$/,
-        exclude: /(node_modules)/,
-        loader: 'ts-loader'
-      }
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader','css-loader') },
+      { test: /\.sass$/, loader: ExtractTextPlugin.extract('style-loader','css-loader!sass-loader') }
     ]
   },
   resolve: {
