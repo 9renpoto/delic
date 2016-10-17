@@ -4,7 +4,7 @@
   "version": "0.2.0",
   "dependencies": {
     "@types/highlight.js": "^9.1.7",
-    "bulma": "0.2.1",
+    "bulma": "0.2.3",
     "highlight.js": "^9.5.0"
   },
   "devDependencies": {
