@@ -3,33 +3,40 @@
   "description": "Simple hugo theme",
   "version": "0.2.0",
   "dependencies": {
-    "@types/highlight.js": "^9.1.7",
     "bulma": "0.2.3",
-    "highlight.js": "^9.5.0"
+    "heatmap.js": "^2.0.5",
+    "highlight.js": "^9.9.0",
+    "lodash": "^4.17.3"
   },
   "devDependencies": {
-    "@9renpoto/tslint-config": "^2.0.0",
-    "css-loader": "^0.26.0",
+    "@9renpoto/eslint-config-flowtype": "0.0.2",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-plugin-transform-flow-strip-types": "^6.21.0",
+    "css-loader": "^0.26.1",
+    "empty": "^0.10.1",
+    "eslint": "^3.12.2",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
-    "node-sass": "^4.0.0",
-    "npm-run-all": "^3.1.1",
-    "rimraf": "^2.5.4",
-    "sass-loader": "^4.0.0",
+    "flow-bin": "^0.37.4",
+    "node-sass": "^4.1.1",
+    "npm-run-all": "^3.1.2",
+    "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
-    "tslint": "^4.0.2",
-    "typescript": "^2.0.0",
+    "tslint": "^4.2.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.1",
-    "webpack-sources": "^0.1.2"
+    "webpack": "^1.14.0",
+    "webpack-closure-compiler": "^2.1.2",
+    "webpack-sources": "^0.1.3"
   },
   "main": "static/assets/delic.bundle.js",
   "private": true,
   "scripts": {
-    "build": "npm run clean && tsc && webpack",
-    "clean": "rimraf dist",
+    "build": "webpack",
     "lint": "npm-run-all -p lint:*",
-    "lint:ts": "tslint \"src/*.ts\"",
+    "lint:es": "eslint .",
+    "lint:flow": "flow",
     "test": "npm run lint"
   }
 }

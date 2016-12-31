@@ -1,0 +1,9 @@
+[ignore]
+
+[include]
+
+[libs]
+
+[options]
+module.name_mapper='.*\(.css\)' -> 'empty/object'
+module.name_mapper='.*\(.sass\)' -> 'empty/object'
