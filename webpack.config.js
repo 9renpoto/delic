@@ -1,29 +1,24 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
-const webpack = require('webpack')
+const ClosureCompilerPlugin = require('webpack-closure-compiler')
 
 module.exports = {
   entry: {
-    delic: path.join(__dirname, 'dist/index.js')
+    delic: path.join(__dirname, 'src/index.js')
   },
   output: {
-    sourceMapFilename: '[name].bundle.map',
     path: path.join(__dirname, 'static/assets'),
     filename: '[name].bundle.js'
   },
-  devtool: '#source-map',
   module: {
     loaders: [
+      { test: /\.js$/, loader: 'babel' },
       { test: /\.png$/, loader: 'url-loader?mimetype=image/png' },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader','css-loader') },
-      { test: /\.sass$/, loader: ExtractTextPlugin.extract('style-loader','css-loader!sass-loader') }
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
+      { test: /\.sass$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader') }
     ]
   },
   resolve: {
-    root: path.join(__dirname, 'src'),
-    modulesDirectories: [
-      'node_modules'
-    ],
     alias: {
       'highlight.css': path.join(__dirname, 'node_modules', 'highlight.js', 'styles', 'monokai.css'),
       'highlight.js': path.join(__dirname, 'node_modules', 'highlight.js', 'lib', 'highlight.js'),
@@ -31,11 +26,13 @@ module.exports = {
     }
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: true,
-      mangle: true,
-      preserveComments: false,
-      minimize: false
+    new ClosureCompilerPlugin({
+      compiler: {
+        language_in: 'ECMASCRIPT6',
+        language_out: 'ECMASCRIPT5',
+        compilation_level: 'ADVANCED'
+      },
+      concurrency: 3
     }),
     new ExtractTextPlugin('[name].bundle.css')
   ]
