@@ -5,8 +5,7 @@
   "dependencies": {
     "bulma": "0.2.3",
     "heatmap.js": "^2.0.5",
-    "highlight.js": "^9.9.0",
-    "lodash": "^4.17.3"
+    "highlight.js": "^9.9.0"
   },
   "devDependencies": {
     "@9renpoto/eslint-config-flowtype": "^0.0.2",
