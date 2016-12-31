@@ -14,14 +14,20 @@
     "babel-loader": "^6.2.10",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
     "babel-plugin-transform-flow-strip-types": "^6.21.0",
+    "babel-register": "^6.18.0",
     "css-loader": "^0.26.1",
     "empty": "^0.10.1",
     "eslint": "^3.12.2",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "flow-bin": "^0.37.4",
+    "jsdom": "^9.9.1",
+    "jsdom-global": "^2.1.1",
+    "mocha": "^3.2.0",
     "node-sass": "^4.1.1",
     "npm-run-all": "^3.1.2",
+    "nyc": "^10.0.0",
+    "power-assert": "^1.4.2",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "tslint": "^4.2.0",
@@ -37,6 +43,8 @@
     "lint": "npm-run-all -p lint:*",
     "lint:es": "eslint .",
     "lint:flow": "flow",
-    "test": "npm run lint"
+    "test:lint": "npm run lint",
+    "test": "npm-run-all -p test:*",
+    "test:mocha": "nyc mocha -- test"
   }
 }

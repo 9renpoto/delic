@@ -8,48 +8,34 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <script async src="{{ .Site.BaseURL }}/assets/delic.bundle.js"></script>
   <title>{{ .Title }}</title>
-  {{ if isset .Site.Params "GoogleTagManagerID" }}
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id={{ .Site.Params.GoogleTagManagerID }}"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer',"{{ .Site.Params.GoogleTagManagerID }}");</script>
-  {{ end }}
 </head>
 <body role="document" data-twttr-rendered="true">
 <div class="nav">
   <div class="nav-left">
-    {{ if isset .Site.Params "MainTitle" }}
     <a class="nav-item title" href="/">{{.Site.Params.MainTitle}}</a>
-    {{ end }}
   </div>
   <div class="nav-right nav-menu">
-    {{ if isset .Site.Params "GithubID" }}
     <a class="nav-item" href="https://github.com/{{.Site.Params.GithubID}}">
       <span class="icon"><i class="fa fa-github"></i></span>
     </a>
-    {{ end }}
-    {{ if isset .Site.Params "FacebookID" }}
     <a class="nav-item" href="https://www.facebook.com/{{.Site.Params.FacebookID}}">
       <span class="icon"><i class="fa fa-facebook"></i></span>
     </a>
-    {{ end }}
-    {{ if isset .Site.Params "TwitterID" }}
     <a class="nav-item" href="https://twitter.com/{{.Site.Params.TwitterID}}">
       <span class="icon"><i class="fa fa-twitter"></i></span>
     </a>
-    {{ end }}
-    {{ if isset .Site.Params "YoutubeID" }}
     <a class="nav-item" href="https://www.youtube.com/channel/{{.Site.Params.YoutubeID}}">
       <span class="icon"><i class="fa fa-youtube"></i></span>
     </a>
-    {{ end }}
-    {{ if isset .Site.Params "Links" }}
-      {{ range .Site.Params.Links }}
-        <a class="nav-item" href="{{ $.Site.BaseURL }}/{{.}}/">{{.}}</a>
-      {{ end }}
+    {{ range .Site.Params.Links }}
+    <a class="nav-item" href="{{ $.Site.BaseURL }}/{{.}}/">{{.}}</a>
     {{ end }}
   </div>
 </div>
