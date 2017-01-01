@@ -1,7 +1,7 @@
 {
   "name": "delic",
   "description": "Simple hugo theme",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "dependencies": {
     "bulma": "0.2.3",
     "highlight.js": "^9.9.0"
