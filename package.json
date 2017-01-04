@@ -3,7 +3,7 @@
   "description": "Simple hugo theme",
   "version": "1.0.0",
   "dependencies": {
-    "bulma": "0.2.3",
+    "bulma": "0.3.0",
     "highlight.js": "^9.9.0"
   },
   "devDependencies": {
