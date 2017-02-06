@@ -1,5 +1,7 @@
 # delic
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/9renpoto/delic.svg)](https://greenkeeper.io/)
+
 hugo templates
 
 [![Build Status][travis-image]][travis-url] [![codecov][codecov-image]][codecov-url] [![Dependency Status][daviddm-image]][daviddm-url] [![devDependency Status][dev-daviddm-image]][dev-daviddm-url]
