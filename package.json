@@ -19,7 +19,7 @@
     "eslint": "^3.17.0",
     "extract-text-webpack-plugin": "^2.0.0",
     "file-loader": "^0.10.0",
-    "flow-bin": "^0.40.0",
+    "flow-bin": "^0.41.0",
     "jsdom": "^9.11.0",
     "jsdom-global": "^2.1.1",
     "jsdom-mount": "^0.1.0",
