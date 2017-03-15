@@ -29,7 +29,7 @@
     "nyc": "^10.0.0",
     "power-assert": "^1.4.2",
     "sass-loader": "^6.0.0",
-    "style-loader": "^0.13.1",
+    "style-loader": "^0.14.0",
     "tslint": "^4.2.0",
     "url-loader": "^0.5.7",
     "webpack": "2.2.1",
