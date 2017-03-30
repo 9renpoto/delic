@@ -14,7 +14,7 @@
     "babel-plugin-transform-flow-strip-types": "^6.21.0",
     "babel-register": "^6.24.0",
     "codecov": "^2.0.2",
-    "css-loader": "^0.27.3",
+    "css-loader": "^0.28.0",
     "empty": "^0.10.1",
     "eslint": "^3.17.0",
     "extract-text-webpack-plugin": "^2.0.0",
