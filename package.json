@@ -9,7 +9,7 @@
   "devDependencies": {
     "@9renpoto/eslint-config-flowtype": "^0.2.0",
     "babel-core": "^6.24.0",
-    "babel-loader": "^6.2.10",
+    "babel-loader": "^7.0.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.0",
     "babel-plugin-transform-flow-strip-types": "^6.21.0",
     "babel-register": "^6.24.0",
