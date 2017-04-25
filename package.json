@@ -3,13 +3,13 @@
   "description": "Simple hugo theme",
   "version": "1.0.0",
   "dependencies": {
-    "bulma": "0.4.0",
+    "bulma": "0.4.1",
     "highlight.js": "^9.9.0"
   },
   "devDependencies": {
     "@9renpoto/eslint-config-flowtype": "^0.2.0",
     "babel-core": "^6.24.0",
-    "babel-loader": "^6.2.10",
+    "babel-loader": "^7.0.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.0",
     "babel-plugin-transform-flow-strip-types": "^6.21.0",
     "babel-register": "^6.24.0",
@@ -20,7 +20,7 @@
     "extract-text-webpack-plugin": "^2.0.0",
     "file-loader": "^0.11.0",
     "flow-bin": "^0.44.0",
-    "jsdom": "^9.12.0",
+    "jsdom": "^10.0.0",
     "jsdom-global": "^2.1.1",
     "jsdom-mount": "^0.1.0",
     "mocha": "^3.2.0",
