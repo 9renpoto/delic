@@ -1,3 +1,3 @@
 /* @flow */
-import { initHighlightingOnLoad } from 'highlight.js'
+import {initHighlightingOnLoad} from 'highlight.js'
 initHighlightingOnLoad()

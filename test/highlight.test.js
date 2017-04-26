@@ -1,5 +1,5 @@
 /* @flow */
-import { describe, it } from 'mocha'
+import {describe, it} from 'mocha'
 import assert from 'assert'
 
 describe('highlight', () => {
