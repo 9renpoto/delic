@@ -12,15 +12,17 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader' },
-      { test: /\.png$/, loader: 'url-loader?mimetype=image/png' },
-      { test: /\.css$/,
+      {test: /\.js$/, loader: 'babel-loader'},
+      {test: /\.png$/, loader: 'url-loader?mimetype=image/png'},
+      {
+        test: /\.css$/,
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: 'css-loader'
         })
       },
-      { test: /\.sass$/,
+      {
+        test: /\.sass$/,
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: 'css-loader!sass-loader'
@@ -30,8 +32,20 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'highlight.css': path.join(__dirname, 'node_modules', 'highlight.js', 'styles', 'monokai.css'),
-      'highlight.js': path.join(__dirname, 'node_modules', 'highlight.js', 'lib', 'highlight.js'),
+      'highlight.css': path.join(
+        __dirname,
+        'node_modules',
+        'highlight.js',
+        'styles',
+        'monokai.css'
+      ),
+      'highlight.js': path.join(
+        __dirname,
+        'node_modules',
+        'highlight.js',
+        'lib',
+        'highlight.js'
+      ),
       'bulma.sass': path.join(__dirname, 'node_modules', 'bulma', 'bulma.sass')
     }
   },
