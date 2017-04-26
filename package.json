@@ -15,6 +15,7 @@
     "babel-register": "^6.24.0",
     "browser-env": "^2.0.30",
     "codecov": "^2.1.0",
+    "cross-env": "^4.0.0",
     "css-loader": "^0.28.0",
     "empty": "^0.10.1",
     "eslint": "^3.19.0",
@@ -37,7 +38,7 @@
   "main": "static/assets/delic.bundle.js",
   "private": true,
   "scripts": {
-    "build": "webpack --profile --json | webpack-bundle-size-analyzer",
+    "build": "cross-env NODE_ENV=production webpack --profile --json | webpack-bundle-size-analyzer",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "lint": "npm-run-all -p lint:*",
     "lint:es": "eslint . --cache",
