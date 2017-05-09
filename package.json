@@ -7,7 +7,7 @@
     "highlight.js": "^9.11.0"
   },
   "devDependencies": {
-    "@9renpoto/eslint-config-flowtype": "^0.2.0",
+    "@9renpoto/eslint-config-flowtype": "^0.3.0",
     "babel-core": "^6.24.0",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
