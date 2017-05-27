@@ -11,9 +11,17 @@ module.exports = {
     filename: '[name].bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
       {test: /\.js$/, loader: 'babel-loader'},
       {test: /\.png$/, loader: 'url-loader?mimetype=image/png'},
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader'
+      },
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({
@@ -22,7 +30,7 @@ module.exports = {
         })
       },
       {
-        test: /\.sass$/,
+        test: /\.s(a|c)ss$/,
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: 'css-loader!sass-loader'
@@ -45,6 +53,13 @@ module.exports = {
         'highlight.js',
         'lib',
         'highlight.js'
+      ),
+      'font-awesome.scss': path.join(
+        __dirname,
+        'node_modules',
+        'font-awesome',
+        'scss',
+        'font-awesome.scss'
       ),
       'bulma.sass': path.join(__dirname, 'node_modules', 'bulma', 'bulma.sass')
     }
