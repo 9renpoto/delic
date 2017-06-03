@@ -35,7 +35,7 @@
     "webpack": "2.6.1",
     "webpack-bundle-size-analyzer": "^2.7.0",
     "webpack-closure-compiler": "^2.1.4",
-    "webpack-sources": "^0.2.3"
+    "webpack-sources": "^1.0.0"
   },
   "main": "static/assets/delic.bundle.js",
   "private": true,
