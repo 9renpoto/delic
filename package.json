@@ -32,7 +32,7 @@
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.8",
-    "webpack": "2.6.1",
+    "webpack": "3.0.0-rc.1",
     "webpack-bundle-size-analyzer": "^2.7.0",
     "webpack-closure-compiler": "^2.1.4",
     "webpack-sources": "^1.0.0"
