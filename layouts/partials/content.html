@@ -34,7 +34,7 @@
 
 <section class="section">
   {{ range $category := .Params.categories }}
-  <a class="button is-info" href="{{ $.Site.BaseURL }}/categories/{{ $category }}.html">
+  <a class="button is-info" href="{{ $.Site.BaseURL }}/categories/{{ $category }}/">
     {{ $category }}
   </a>
   {{ end  }}
