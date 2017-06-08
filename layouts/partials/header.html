@@ -33,7 +33,7 @@
     <a class="nav-item" href="https://www.youtube.com/channel/{{.Site.Params.YoutubeID}}">
       <span class="icon"><i class="fa fa-youtube"></i></span>
     </a>
-    <a class="nav-item" href="{{ $.Site.BaseURL }}/blog.html">blog</a>
+    <a class="nav-item" href="{{ $.Site.BaseURL }}/blog/">blog</a>
     {{ range .Site.Params.Links }}
     <a class="nav-item" href="{{ $.Site.BaseURL }}/{{.}}/">{{.}}</a>
     {{ end }}
