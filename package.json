@@ -15,7 +15,7 @@
     "babel-preset-flow": "^6.23.0",
     "babel-register": "^6.24.1",
     "browser-env": "^3.0.0",
-    "codecov": "^2.2.0",
+    "codecov": "^3.0.0",
     "cross-env": "^5.0.1",
     "css-loader": "^0.28.4",
     "empty": "^0.10.1",
