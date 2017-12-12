@@ -34,7 +34,7 @@
     "url-loader": "^0.6.2",
     "webpack": "3.10.0",
     "webpack-bundle-size-analyzer": "^2.7.0",
-    "webpack-closure-compiler": "^2.1.4",
+    "webpack-closure-compiler": "^2.1.6",
     "webpack-sources": "^1.0.0"
   },
   "main": "static/assets/delic.bundle.js",
